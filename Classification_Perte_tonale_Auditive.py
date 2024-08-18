@@ -17,8 +17,8 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import EarlyStopping
 
 # Charger les ensembles d'entraînement et de test
-train_df = pd.read_excel('/Users/sene/Documents/These_IA/DataBase public/NHANES/NHANES 2017-2018/ANN/train_data.xlsx')
-test_df = pd.read_excel('/Users/sene/Documents/These_IA/DataBase public/NHANES/NHANES 2017-2018/ANN/test_data.xlsx')
+train_df = pd.read_excel('/Users/sene/Documents/ChatBot/Dépot_ChatBot/ANN_HL_PV/train_data.xlsx')
+test_df = pd.read_excel('/Users/sene/Documents/ChatBot/Dépot_ChatBot/ANN_HL_PV/test_data.xlsx')
 
 # Séparer les caractéristiques (X) et les étiquettes (y)
 X_train = train_df.drop(columns=['diagnostic'])
@@ -55,7 +55,7 @@ print(f"Perte sur l'ensemble de test : {loss}")
 print(f"Exactitude sur l'ensemble de test : {accuracy}")
 
 # Sauvegarder le modèle
-model.save('/Users/sene/Documents/These_IA/DataBase public/NHANES/NHANES 2017-2018/ANN/auditory_loss_model.h5')
+model.save('/Users/sene/Documents/ChatBot/Dépot_ChatBot/ANN_HL_PV/auditory_loss_model.h5')
 
 # Afficher les courbes de perte et d'exactitude
 import matplotlib.pyplot as plt

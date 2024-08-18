@@ -14,7 +14,7 @@ from sklearn.feature_selection import VarianceThreshold
 from sklearn.model_selection import train_test_split
 
 # Chemin vers le fichier de données combiné
-combined_data_path = '/Users/sene/Documents/These_IA/DataBase public/NHANES/NHANES 2017-2018/ANN/NHANES 2017-2018final_combined_data.xlsx'
+combined_data_path = '/Users/sene/Documents/ChatBot/Dépot_ChatBot/ANN_HL_PV/NHANES 2017-2018final_combined_data.xlsx'
 
 # Charger les données
 df = pd.read_excel(combined_data_path)
@@ -64,8 +64,8 @@ df.drop(columns=to_drop, inplace=True)
 train_df, test_df = train_test_split(df, test_size=0.3, random_state=42, stratify=df['diagnostic'])
 
 # Sauvegarder les ensembles d'entraînement et de test dans des fichiers Excel
-train_df.to_excel('/Users/sene/Documents/These_IA/DataBase public/NHANES/NHANES 2017-2018/ANN/train_data.xlsx', index=False)
-test_df.to_excel('/Users/sene/Documents/These_IA/DataBase public/NHANES/NHANES 2017-2018/ANN/test_data.xlsx', index=False)
+train_df.to_excel('/Users/sene/Documents/ChatBot/Dépot_ChatBot/ANN_HL_PV/train_data.xlsx', index=False)
+test_df.to_excel('/Users/sene/Documents/ChatBot/Dépot_ChatBot/ANN_HL_PV/test_data.xlsx', index=False)
 
 # Afficher les premières lignes du jeu de données d'entraînement et de test pour vérification
 print("Ensemble d'entraînement:")
